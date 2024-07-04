@@ -16,5 +16,9 @@ class DreaminterpretationContentActivity : AppCompatActivity() {
         binding.dreaminterpretationCloseIb.setOnClickListener {
             finish()
         }
+
+        binding.dreaminterpretationSaveTv.setOnClickListener {
+            finish()
+        }
     }
 }
