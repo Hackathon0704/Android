@@ -155,27 +155,26 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/tag_time_ll"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        />
+        android:layout_marginStart="20dp" />
 
     <Button
         android:id="@+id/tag_daily"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
         android:text="일상"
         app:layout_constraintTop_toBottomOf="@id/dreamdiary_tag_category_tv"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/dreamdiary_tag_category_tv"
         />
 
     <Button
         android:id="@+id/tag_baddream"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
         android:text="악몽"
@@ -187,7 +186,7 @@
     <Button
         android:id="@+id/tag_recycledream"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
         android:text="반복되는  꿈"
@@ -198,7 +197,7 @@
     <Button
         android:id="@+id/tag_luciddream"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
         android:text="자각몽"
@@ -209,7 +208,7 @@
     <Button
         android:id="@+id/tag_foresightdream"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
         android:text="예지몽"
@@ -217,6 +216,144 @@
         app:layout_constraintStart_toEndOf="@id/tag_luciddream"
         android:layout_marginStart="10dp"
         />
+
+    <TextView
+        android:id="@+id/dreamdiary_tag_person_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="인물"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_luciddream"
+        app:layout_constraintTop_toBottomOf="@+id/tag_luciddream" />
+    <Button
+        android:id="@+id/tag_person_plus"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="+"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_person_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_person_tv"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/dreamdiary_tag_location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="장소"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_person_plus"
+        app:layout_constraintTop_toBottomOf="@+id/tag_person_plus"
+        android:layout_marginTop="20dp"
+        />
+    <Button
+        android:id="@+id/tag_location_plus"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="+"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_location_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_location_tv"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/dreamdiary_tag_feel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기분"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_location_plus"
+        app:layout_constraintTop_toBottomOf="@+id/tag_location_plus"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/tag_feel_plus"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="+"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_feel_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_feel_tv"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/dreamdiary_tag_hashtag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="해시태그"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_feel_plus"
+        app:layout_constraintTop_toBottomOf="@+id/tag_feel_plus"
+        android:layout_marginTop="20dp"
+        />
+    <Button
+        android:id="@+id/tag_hashtag_plus"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="+"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_hashtag_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_hashtag_tv"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/dreamdiary_tag_sharpness_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="꿈 선명도"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_hashtag_plus"
+        app:layout_constraintTop_toBottomOf="@+id/tag_hashtag_plus"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/tag_high_sharpness"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="선명함"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_sharpness_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_sharpness_tv"
+        android:layout_marginTop="5dp"
+        />
+
+    <Button
+        android:id="@+id/tag_middle_sharpness"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="보통"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/tag_high_sharpness"
+        app:layout_constraintTop_toTopOf="@+id/tag_high_sharpness"
+        android:layout_marginStart="5dp"
+        />
+
+    <Button
+        android:id="@+id/tag_low_sharpness"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:background="@drawable/button_plus"
+        android:text="흐릿함"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/tag_middle_sharpness"
+        app:layout_constraintTop_toTopOf="@+id/tag_middle_sharpness"
+        android:layout_marginStart="5dp"
+        />
+
+
 
 
 
