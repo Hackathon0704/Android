@@ -1,5 +1,6 @@
 package com.example.umc_hackathon
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -17,5 +18,9 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerPwCheckTv.visibility = View.GONE
         binding.registerPwReCheckTv.visibility = View.GONE
         binding.registerNameCheckTv.visibility = View.GONE
+
+        binding.registerBtn.setOnClickListener {
+            startActivity(Intent(this, RegisterCheckActivity::class.java))
+        }
     }
 }
