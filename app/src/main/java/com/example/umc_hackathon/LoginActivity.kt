@@ -20,6 +20,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        userAccount = UserAccount("", "")
+
         binding.loginIdCheckTv.visibility = View.INVISIBLE
         binding.loginPwCheckTv.visibility = View.INVISIBLE
 
