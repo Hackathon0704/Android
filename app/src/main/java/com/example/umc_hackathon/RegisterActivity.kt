@@ -18,11 +18,17 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
 
     lateinit var userSignup: UserSignup
+    lateinit var checkAccountRequest: CheckAccountRequest
+
+    var ispassDuplicate = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        userSignup = UserSignup("","","")
+        checkAccountRequest = CheckAccountRequest("")
 
         binding.registerPwCheckTv.visibility = View.INVISIBLE
         binding.registerPwReCheckTv.visibility = View.INVISIBLE
@@ -30,11 +36,15 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerIdCheckTv.visibility = View.INVISIBLE
         binding.registerFinalCheckTv.visibility = View.INVISIBLE
 
+        binding.registerIdDuplicateTv.visibility = View.INVISIBLE
+        binding.registerIdOkayTv.visibility = View.INVISIBLE
+
 
         var isCheck1 = false
         var isCheck2 = false
         var isCheck3 = false
         var isCheck4 = false
+
         binding.registerNameEt.addTextChangedListener(object : TextWatcher{
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -62,6 +72,9 @@ class RegisterActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
             override fun afterTextChanged(s: Editable?) {
+                binding.registerIdDuplicateTv.visibility = View.INVISIBLE
+                binding.registerIdOkayTv.visibility = View.INVISIBLE
+
                 // 닉네임 유효성 검사
                 val nickPattern = "^[a-zA-Z0-9]{5,15}$"   // 영문, 숫자 5~15자
                 val pattern = Pattern.compile(nickPattern)
@@ -119,7 +132,7 @@ class RegisterActivity : AppCompatActivity() {
         })
 
         binding.registerBtn.setOnClickListener {
-            if(isCheck1 && isCheck2 && isCheck3 && isCheck4) {
+            if(isCheck1 && isCheck2 && isCheck3 && isCheck4 && ispassDuplicate) {
                 join()
 
                 startActivity(Intent(this, RegisterCheckActivity::class.java))
@@ -128,6 +141,11 @@ class RegisterActivity : AppCompatActivity() {
             else {
                 binding.registerFinalCheckTv.visibility = View.VISIBLE
             }
+        }
+
+
+        binding.registerIdCheckBtn.setOnClickListener {
+            check_account()
         }
     }
 
@@ -147,7 +165,7 @@ class RegisterActivity : AppCompatActivity() {
                 val resp = response.body()
                 if(resp!=null){
                     when(resp.code){
-                        "USER_1000"-> {
+                        "COMMON200"-> {
                             Log.d("jion Result", resp.message)
                         }
                         else-> Log.d("jion Result", resp.message)
@@ -157,6 +175,49 @@ class RegisterActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<UserResponse<UserJoin>>, t: Throwable) {
                 Log.d("jion Fail", t.message.toString())
+            }
+        })
+    }
+
+    private fun check_account() {
+        val userService = getRetrofit().create(UserInterface::class.java)
+
+        checkAccountRequest.account = binding.registerIdEt.text.toString()
+
+        userService.check_account(checkAccountRequest).enqueue(object: Callback<UserResponse<CheckAccount>> {
+            override fun onResponse(
+                call: Call<UserResponse<CheckAccount>>,
+                response: Response<UserResponse<CheckAccount>>
+            ) {
+                Log.d("chcek Success", response.toString())
+                val resp = response.body()
+                if(resp!=null){
+                    when(resp.code){
+                        "COMMON200"-> {
+                            Log.d("chcek Result", resp.message)
+                            Log.d("chcek Resultt", resp.result.duplicated.toString())
+
+                            binding.registerIdCheckTv.visibility = View.INVISIBLE
+
+                            if(resp.result.duplicated) {
+                                binding.registerIdDuplicateTv.visibility = View.VISIBLE
+                                binding.registerIdOkayTv.visibility = View.INVISIBLE
+                                ispassDuplicate = false
+                            }
+                            else {
+                                binding.registerIdDuplicateTv.visibility = View.INVISIBLE
+                                binding.registerIdOkayTv.visibility = View.VISIBLE
+                                ispassDuplicate = true
+                            }
+
+                        }
+                        else-> Log.d("chcek Result", resp.message)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UserResponse<CheckAccount>>, t: Throwable) {
+                Log.d("chcek Fail", t.message.toString())
             }
         })
     }

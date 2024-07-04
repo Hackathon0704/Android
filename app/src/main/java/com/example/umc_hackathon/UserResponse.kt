@@ -31,3 +31,11 @@ data class UserSignup(
     var account: String,
     var password: String
 )
+
+data class CheckAccountRequest(
+    var account: String
+)
+
+data class CheckAccount(
+    var duplicated: Boolean
+)
