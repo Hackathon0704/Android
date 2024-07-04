@@ -1,7 +1,9 @@
 package com.example.umc_hackathon
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.umc_hackathon.databinding.ActivityBuyProductBinding
 import com.example.umc_hackathon.databinding.ActivityDreaminterpretationExpertContentBinding
 
 class DreaminterpretationExpertContentActivity : AppCompatActivity() {
@@ -12,8 +14,13 @@ class DreaminterpretationExpertContentActivity : AppCompatActivity() {
         binding = ActivityDreaminterpretationExpertContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.dreaminterpretationExpertSaveTv.setOnClickListener {
+            startActivity(Intent(this, BuyProductActivity::class.java))
+            finishAffinity()
+        }
+
         binding.dreaminterpretationExpertCloseIb.setOnClickListener {
-         finish()
+            finish()
         }
     }
 }
