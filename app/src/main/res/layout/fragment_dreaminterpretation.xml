@@ -11,7 +11,7 @@
         android:id="@+id/dream_interpretation_title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/pretendard"
         android:text="꿈 해몽 게시판"
