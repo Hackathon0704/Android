@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">umc_hackathon</string>
+    <string name="diary">Diary</string>
+    <string name="dreamshare">Dreamshare</string>
+    <string name="interpretation">Interpretation</string>
+    <string name="mypage">Mypage</string>
 </resources>
