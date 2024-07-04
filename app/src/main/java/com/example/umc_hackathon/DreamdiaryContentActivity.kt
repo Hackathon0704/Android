@@ -12,5 +12,9 @@ class DreamdiaryContentActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDreamdiaryContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.dreamdiaryCloseIb.setOnClickListener {
+            finish()
+        }
     }
 }

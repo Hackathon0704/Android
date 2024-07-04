@@ -12,5 +12,8 @@ class DreaminterpretationExpertContentActivity : AppCompatActivity() {
         binding = ActivityDreaminterpretationExpertContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.dreaminterpretationExpertCloseIb.setOnClickListener {
+         finish()
+        }
     }
 }

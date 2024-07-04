@@ -11,5 +11,10 @@ class DreaminterpretationContentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDreaminterpretationContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.dreaminterpretationCloseIb.setOnClickListener {
+            finish()
+        }
     }
 }
