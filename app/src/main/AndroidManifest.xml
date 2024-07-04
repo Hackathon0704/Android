@@ -16,8 +16,9 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".RegisterCheckActivity"/>
+        <activity android:name=".StartActivity"/>
         <activity
-            android:name=".StartActivity"
+            android:name=".DreamdiaryTagActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
