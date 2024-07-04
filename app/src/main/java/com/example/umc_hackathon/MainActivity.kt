@@ -30,7 +30,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun setFloatingActionButtonListener(fragment : Fragment) {
         binding.mainFloatingButton.setOnClickListener {
-            startActivity(Intent(this, DreaminterpretationContentActivity::class.java))
+            when (fragment) {
+                is DiaryFragment -> {
+                    startActivity(Intent(this, DreamdiaryTagActivity::class.java))
+                }
+                is InterpretationFragment -> {
+                    startActivity(Intent(this, DreaminterpretationContentActivity::class.java))
+                }
+                is DreamShareFragment -> {
+                    startActivity(Intent(this, DreaminterpretationContentActivity::class.java))
+                }
+                is MypageFragment -> {
+                    // 마이페이지 Fragment에서의 특별한 동작
+                }
+            }
         }
 
         if (fragment is MypageFragment) {
