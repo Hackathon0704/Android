@@ -38,18 +38,20 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
 
-                R.id.dreamshare_Fragment -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, DreamShareFragment())
-                        .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true
-                }
                 R.id.interpretation_Fragment -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, InterpretationFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
+
+                R.id.dreamshare_Fragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frm, DreamShareFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+
                 R.id.mypage_Fragment -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_frm, MypageFragment())
