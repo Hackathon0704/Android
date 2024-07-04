@@ -4,14 +4,20 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.umc_hackathon.databinding.ActivityRegisterBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.regex.Pattern
 
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRegisterBinding
+
+    lateinit var userSignup: UserSignup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -114,6 +120,8 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.registerBtn.setOnClickListener {
             if(isCheck1 && isCheck2 && isCheck3 && isCheck4) {
+                join()
+
                 startActivity(Intent(this, RegisterCheckActivity::class.java))
                 finish()
             }
@@ -121,5 +129,36 @@ class RegisterActivity : AppCompatActivity() {
                 binding.registerFinalCheckTv.visibility = View.VISIBLE
             }
         }
+    }
+
+    private fun join() {
+        val userService = getRetrofit().create(UserInterface::class.java)
+
+        userSignup.name = binding.registerNameEt.text.toString()
+        userSignup.account = binding.registerIdEt.text.toString()
+        userSignup.password = binding.registerPwEt.text.toString()
+        userSignup.passwordConfirm = binding.registerPwReEt.text.toString()
+
+        userService.join(userSignup).enqueue(object: Callback<UserResponse<UserJoin>> {
+            override fun onResponse(
+                call: Call<UserResponse<UserJoin>>,
+                response: Response<UserResponse<UserJoin>>
+            ) {
+                Log.d("jion Success", response.toString())
+                val resp = response.body()
+                if(resp!=null){
+                    when(resp.code){
+                        "USER_1000"-> {
+                            Log.d("jion Result", resp.message)
+                        }
+                        else-> Log.d("jion Result", resp.message)
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UserResponse<UserJoin>>, t: Throwable) {
+                Log.d("jion Fail", t.message.toString())
+            }
+        })
     }
 }
