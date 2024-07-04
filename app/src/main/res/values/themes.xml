@@ -1,8 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Umc_hackathon" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Umc_hackathon" parent="Theme.AppCompat.Light">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!--타이틀 바 제거-->
+        <item name="windowNoTitle">true</item>
+
     </style>
 
     <style name="Theme.Umc_hackathon" parent="Base.Theme.Umc_hackathon" />

@@ -1,14 +1,14 @@
 package com.example.umc_hackathon
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.umc_hackathon.databinding.ActivityRegisterBinding
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityRegisterBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_start)
     }
 }
