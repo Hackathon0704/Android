@@ -23,8 +23,8 @@
 
     <ImageView
         android:id="@+id/login_logo_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="206dp"
+        android:layout_height="56.97dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo"
         app:layout_constraintTop_toTopOf="parent"

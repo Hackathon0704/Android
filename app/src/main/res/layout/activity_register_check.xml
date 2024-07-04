@@ -38,8 +38,8 @@
 
     <ImageView
         android:id="@+id/register_check_character_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230.19dp"
+        android:layout_height="194.88dp"
         android:src="@drawable/character2"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"

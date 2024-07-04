@@ -52,8 +52,8 @@
     
     <ImageView
         android:id="@+id/start_character_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="193.44dp"
+        android:layout_height="165.4dp"
         android:src="@drawable/character"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,8 +63,8 @@
     
     <ImageView
         android:id="@+id/start_logo_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="206dp"
+        android:layout_height="56.97dp"
         android:scaleType="fitXY"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@id/start_text_tv"
