@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_purple">
+
+    <TextView
+        android:id="@+id/dreamdiary_tag_category_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카테고리"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        />
+
+    <Button
+        android:id="@+id/tag_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_button_background"
+        android:textColor="@color/white"
+        android:text="일상"
+        app:layout_constraintTop_toBottomOf="@id/dreamdiary_tag_category_tv"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/dreamdiary_tag_category_tv"
+        />
+
+    <Button
+        android:id="@+id/tag_baddream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_button_background"
+        android:textColor="@color/white"
+        android:text="악몽"
+        app:layout_constraintTop_toTopOf="@id/tag_daily"
+        app:layout_constraintStart_toEndOf="@id/tag_daily"
+        android:layout_marginStart="10dp"
+        />
+
+    <Button
+        android:id="@+id/tag_recycledream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_button_background"
+        android:textColor="@color/white"
+        android:text="반복되는  꿈"
+        app:layout_constraintTop_toTopOf="@id/tag_daily"
+        app:layout_constraintStart_toEndOf="@id/tag_baddream"
+        android:layout_marginStart="10dp"
+        />
+    <Button
+        android:id="@+id/tag_luciddream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_button_background"
+        android:textColor="@color/white"
+        android:text="자각몽"
+        app:layout_constraintStart_toStartOf="@id/tag_daily"
+        app:layout_constraintTop_toBottomOf="@id/tag_daily"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/tag_foresightdream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_button_background"
+        android:textColor="@color/white"
+        android:text="예지몽"
+        app:layout_constraintTop_toTopOf="@id/tag_luciddream"
+        app:layout_constraintStart_toEndOf="@id/tag_luciddream"
+        android:layout_marginStart="10dp"
+        />
+
 
 
 
