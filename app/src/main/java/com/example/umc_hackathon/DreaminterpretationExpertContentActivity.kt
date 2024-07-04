@@ -15,11 +15,12 @@ class DreaminterpretationExpertContentActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.dreaminterpretationExpertSaveTv.setOnClickListener {
-            startActivity(Intent(this, ActivityBuyProductBinding::class.java))
+            startActivity(Intent(this, BuyProductActivity::class.java))
+            finishAffinity()
         }
 
         binding.dreaminterpretationExpertCloseIb.setOnClickListener {
-         finish()
+            finish()
         }
     }
 }
