@@ -74,6 +74,19 @@
 
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_storage"
+        app:layout_constraintEnd_toEndOf="@id/dreamdiary_insert_content_et"
+        app:layout_constraintTop_toBottomOf="@id/dreamdiary_insert_content_et"
+        android:layout_marginTop="10dp"
+        android:text="  나의 꿈 일기 불러오기"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/storage"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
