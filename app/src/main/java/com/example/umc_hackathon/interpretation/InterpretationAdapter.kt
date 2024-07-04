@@ -16,6 +16,7 @@ class InterpretationAdapter(private val items: List<InterpretationItem>) : Recyc
         }
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemDreamInterpretationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)

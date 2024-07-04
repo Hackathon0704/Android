@@ -8,14 +8,15 @@ import com.example.umc_hackathon.R
 import com.example.umc_hackathon.databinding.ItemMypageManageFriendBinding
 
 data class Friend(
-    val name: String,
+    val name: String
 )
 
-class MyPageManageFriendFragmentRVAdapter(private val friendList: List<String>) : RecyclerView.Adapter<MyPageManageFriendFragmentRVAdapter.FriendViewHolder>() {
+class MyPageManageFriendFragmentRVAdapter(private val friendList: List<Friend>) : RecyclerView.Adapter<MyPageManageFriendFragmentRVAdapter.FriendViewHolder>() {
 
-    inner class FriendViewHolder(private val binding: ItemMypageManageFriendBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(friend: String) {
-            binding.name.text = friend
+
+    class FriendViewHolder(private val binding: ItemMypageManageFriendBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(friend: Friend) {
+            binding.name.text = friend.name
             // binding.deleteIv와 binding.deleteTv에 클릭 리스너를 추가할 수 있습니다.
         }
     }
@@ -29,7 +30,5 @@ class MyPageManageFriendFragmentRVAdapter(private val friendList: List<String>) 
         holder.bind(friendList[position])
     }
 
-    override fun getItemCount(): Int {
-        return friendList.size
-    }
+    override fun getItemCount(): Int = friendList.size
 }

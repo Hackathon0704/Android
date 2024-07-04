@@ -15,6 +15,7 @@ class InterpretationFragment : Fragment() {
 
     private lateinit var binding: FragmentDreaminterpretationBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
