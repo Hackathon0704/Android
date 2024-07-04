@@ -38,12 +38,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/pretendardvariable"
-        android:text="삭제"
+        android:text="게시글 작성"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@+id/dreaminterpretation_save_tv"
-        app:layout_constraintEnd_toStartOf="@id/dreaminterpretation_save_tv" />
+        app:layout_constraintEnd_toStartOf="@id/dreaminterpretation_save_tv"
+        app:layout_constraintStart_toEndOf="@+id/dreaminterpretation_close_ib"
+        app:layout_constraintTop_toTopOf="@+id/dreaminterpretation_save_tv" />
 
     <EditText
         android:id="@+id/dreaminterpretation_insert_title_et"
@@ -72,20 +73,6 @@
         android:textSize="15sp"
         android:gravity="center"
 
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_storage"
-        app:layout_constraintEnd_toEndOf="@id/dreamdiary_insert_content_et"
-        app:layout_constraintTop_toBottomOf="@id/dreamdiary_insert_content_et"
-        android:layout_marginTop="10dp"
-        android:text="  나의 꿈 일기 불러오기"
-        android:textColor="@color/white"
-        android:drawableLeft="@drawable/storage"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         />
 
 
