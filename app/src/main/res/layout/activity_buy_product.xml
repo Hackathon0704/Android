@@ -15,6 +15,7 @@
         android:text="해몽 상품 결제하기"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/pretendardvariable"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -24,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="홍길동 전문가의 꿈 해몽"
         android:textSize="16sp"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:text="5,000원"
         android:textSize="16sp"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/subtitle"
         app:layout_constraintStart_toStartOf="parent" />
@@ -44,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="최대 작업 소요 1일\n무료 피드백 3회"
         android:textSize="14sp"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/price"
         app:layout_constraintStart_toStartOf="parent" />
@@ -54,6 +58,7 @@
         android:layout_height="wrap_content"
         android:text="꼭 확인해주세요!"
         android:textSize="14sp"
+        android:fontFamily="@font/pretendardvariable"
         android:textColor="@android:color/holo_red_dark"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/details"
@@ -66,6 +71,7 @@
         android:text="전문가의 댓글 작성 이후에는 환불이 불가능합니다.\n전문가의 댓글을 기본적으로 제공하며, 전문가와 협의 하에 진행 방식을 결정할 수 있습니다.\n댓글 내용은 Dream Girl 앱에서만 확인할 수 있습니다."
         android:textSize="12sp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/pretendardvariable"
         app:layout_constraintTop_toBottomOf="@id/warning"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -75,6 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="최종 결제 금액"
+        android:fontFamily="@font/pretendardvariable"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
@@ -85,6 +92,7 @@
         android:id="@+id/item_price_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="상품 금액"
         android:textSize="14sp"
         android:layout_marginTop="8dp"
@@ -95,6 +103,7 @@
         android:id="@+id/item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="5,000원"
         android:textSize="14sp"
         android:layout_marginTop="8dp"
@@ -105,6 +114,7 @@
         android:id="@+id/discount_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="할인 금액"
         android:textSize="14sp"
         android:layout_marginTop="4dp"
@@ -115,6 +125,7 @@
         android:id="@+id/discount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="0원"
         android:textSize="14sp"
         android:layout_marginTop="4dp"
@@ -125,6 +136,7 @@
         android:id="@+id/final_price_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="결제 금액"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -136,6 +148,7 @@
         android:id="@+id/final_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardvariable"
         android:text="5,000원"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -148,6 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="아래 내용에 전체 동의합니다."
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/final_price"
         app:layout_constraintStart_toStartOf="parent" />
@@ -157,6 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="eXpert 서비스 이용 약관 동의"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@id/agree_all"
         app:layout_constraintStart_toStartOf="parent" />
@@ -166,6 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="상품 구매 조건 확인 및 구매 동의"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/agree_service"
         app:layout_constraintStart_toStartOf="parent" />
@@ -175,6 +191,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="청약철회/계약해제 제한 및 철회 제한에 관한 청약 철회 등 환불 안내 확인 및 동의"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/agree_purchase"
         app:layout_constraintStart_toStartOf="parent" />
@@ -184,6 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="하단 유의사항의 확인 및 동의"
+        android:fontFamily="@font/pretendardvariable"
         android:layout_marginTop="4dp"
         app:layout_constraintTop_toBottomOf="@id/agree_refund"
         app:layout_constraintStart_toStartOf="parent" />
@@ -195,6 +213,7 @@
         android:text="결제하기"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/agree_etc"
+        android:fontFamily="@font/pretendardvariable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
