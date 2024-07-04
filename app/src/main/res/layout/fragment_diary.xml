@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
+        android:visibility="visible"
         android:id="@+id/diary_user_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,12 +53,108 @@
         app:layout_constraintStart_toEndOf="@id/diary_main_tv2"
         app:layout_constraintTop_toTopOf="@id/diary_main_tv2"
         android:layout_marginStart="8dp"/>
-    
+
+    <TextView
+        android:id="@+id/dream_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="20dp"
+        android:text="나의 꿈기록"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/box"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded_background2"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오래된 내 친구가 나오는 꿈"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024.07.05"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="43dp"
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/delete"
+            />
+
+        <Button
+            android:id="@+id/tag_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/button_normal2"
+            android:textColor="@color/white"
+            android:text="일상"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp"
+            />
+
+        <Button
+            android:id="@+id/tag_baddream"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/button_normal2"
+            android:textColor="@color/white"
+            android:text="친구"
+            app:layout_constraintTop_toTopOf="@id/tag_daily"
+            app:layout_constraintStart_toEndOf="@id/tag_daily"
+            android:layout_marginStart="10dp"
+            />
+        <Button
+            android:id="@+id/tag_recycledream"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/button_normal2"
+            android:textColor="@color/white"
+            android:text="반복되는  꿈"
+            app:layout_constraintTop_toTopOf="@id/tag_daily"
+            app:layout_constraintStart_toEndOf="@id/tag_baddream"
+            android:layout_marginStart="10dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/diary_null_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="아직 작성된 일기가 없어요"
+        android:visibility="visible"
         android:textColor="@color/white"
         android:lineSpacingExtra="15dp"
         android:fontFamily="@font/pretendardvariable"
@@ -68,6 +165,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <LinearLayout
+        android:visibility="visible"
         android:id="@+id/diary_null_ll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
