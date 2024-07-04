@@ -14,4 +14,9 @@ interface UserInterface {
     fun join(
         @Body userSignup: UserSignup
     ): Call<UserResponse<UserJoin>>
+
+    @POST("/user/check-account")
+    fun check_account(
+        @Body checkAccountRequest: CheckAccountRequest
+    ): Call<UserResponse<CheckAccount>>
 }
