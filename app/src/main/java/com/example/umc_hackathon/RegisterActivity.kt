@@ -137,7 +137,6 @@ class RegisterActivity : AppCompatActivity() {
         userSignup.name = binding.registerNameEt.text.toString()
         userSignup.account = binding.registerIdEt.text.toString()
         userSignup.password = binding.registerPwEt.text.toString()
-        userSignup.passwordConfirm = binding.registerPwReEt.text.toString()
 
         userService.join(userSignup).enqueue(object: Callback<UserResponse<UserJoin>> {
             override fun onResponse(
