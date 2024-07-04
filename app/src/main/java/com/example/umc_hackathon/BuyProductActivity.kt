@@ -18,5 +18,9 @@ class BuyProductActivity : AppCompatActivity() {
             finishAffinity()
         }
 
+        binding.prev.setOnClickListener {
+            finishAffinity()
+        }
+
     }
 }

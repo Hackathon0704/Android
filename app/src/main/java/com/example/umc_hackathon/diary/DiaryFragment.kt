@@ -24,6 +24,7 @@ class DiaryFragment : Fragment() {
         binding.diaryNullTv3.text = AppData.user_Name
 
 
+
         return binding.root
     }
 }
