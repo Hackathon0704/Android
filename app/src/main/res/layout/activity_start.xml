@@ -7,7 +7,7 @@
 
     <Button
         android:id="@+id/start_start_btn"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/main_button"
         android:text="시작하기"
@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/start_login_btn"
-        android:layout_width="320dp"
+        android:layout_width="0dp"
         android:layout_height="40dp"
         android:background="@drawable/main_button"
         android:text="로그인"
