@@ -82,8 +82,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edittext_round_corner_rectangle"
-        android:text="          제목(최대 20자)"
-        android:textColor="@color/white"
+        android:hint="제목(최대 20자)"
+        android:textColorHint="@color/white"
         android:textSize="14sp"
         />
     <EditText
@@ -95,8 +95,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
-        android:text="내용을 입력하세요"
-        android:textColor="@color/white"
+        android:hint="내용을 입력하세요"
+        android:textColorHint="@color/white"
         android:textSize="15sp"
         android:gravity="center"
 
