@@ -8,5 +8,7 @@ class AppData : Application() {
         var user_Name = ""
         var user_Id = 0
         var user_Account = ""
+
+        var isgoMain = false
     }
 }
