@@ -38,9 +38,9 @@
 
     <ImageView
         android:id="@+id/register_check_character_iv"
-        android:layout_width="166dp"
-        android:layout_height="184dp"
-        android:src="@drawable/puang"
+        android:layout_width="230.19dp"
+        android:layout_height="194.88dp"
+        android:src="@drawable/character2"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

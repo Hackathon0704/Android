@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">umc_hackathon</string>
-    <string name="diary">Diary</string>
-    <string name="dreamshare">Dreamshare</string>
-    <string name="interpretation">Interpretation</string>
-    <string name="mypage">Mypage</string>
+    <string name="app_name">Dreamory</string>
+    <string name="diary">꿈 일기</string>
+    <string name="dreamshare">꿈 공유</string>
+    <string name="interpretation">꿈 해몽</string>
+    <string name="mypage">마이페이지</string>
 </resources>

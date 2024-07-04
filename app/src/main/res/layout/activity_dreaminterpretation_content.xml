@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/dark_purple"
+    >
+    <ImageButton
+        android:id="@+id/dreaminterpretation_close_ib"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/baseline_close_24"
+        android:background="@color/dark_purple"
+        app:layout_constraintTop_toTopOf="@id/dreaminterpretation_save_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/dreaminterpretation_save_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="저장"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dreaminterpretation_delete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/pretendardvariable"
+        android:text="게시글 작성"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/dreaminterpretation_save_tv"
+        app:layout_constraintStart_toEndOf="@+id/dreaminterpretation_close_ib"
+        app:layout_constraintTop_toTopOf="@+id/dreaminterpretation_save_tv" />
+
+    <EditText
+        android:id="@+id/dreaminterpretation_insert_title_et"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:layout_constraintTop_toBottomOf="@+id/dreaminterpretation_save_tv"
+        android:layout_marginTop="31dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_round_corner_rectangle"
+        android:text="          제목(최대 20자)"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        />
+    <EditText
+        android:id="@+id/dreamdiary_insert_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="384dp"
+        android:background="@drawable/edittext_round_corner_rectangle"
+        app:layout_constraintTop_toBottomOf="@+id/dreaminterpretation_insert_title_et"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:text="내용을 입력하세요"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:gravity="center"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

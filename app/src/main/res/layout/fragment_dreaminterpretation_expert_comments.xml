@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_purple">
+
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/baseline_chevron_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dream_interpretation_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard"
+        android:text="꿈 해몽 게시판"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/left_arrow" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/pretendard"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dream_interpretation_title_tv" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#8725C3"
+        android:fontFamily="@font/pretendard"
+        android:text="닉네임"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendard"
+        android:text="2024.07.04"
+        android:textSize="12sp"
+        android:textColor="#8725C3"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/nickname"
+        app:layout_constraintTop_toTopOf="@+id/nickname"
+        app:layout_constraintBottom_toBottomOf="@+id/nickname"/>
+
+    <View
+        android:id="@+id/separator_bottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#4C007A"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/pretendard"
+        android:text="저희 대학교 교수님이 저한테 저보고 그것도 못해!!!! 하고 가버려서 시험은 괜찮게 본 것 같은데 나 찍혀서 c미만 나오는거 아니야 걱정하면서 청량리 버스정류장에 갔는데 갑자기 제 인생의 최악의 친구였던 애가 지나가고 버스표를 보니까 청량리에서 파주 운정까지 가는 마을버스가 있길래 우와...마을버스가 우리집쪽까지 가네 개꿀이다 하고 타려는데 기사 아저씨가 음흉하게 걸렸다 하고 꿈이 깼어요.. 이런 잡탕 악몽은 처음 꿔봐서... 꿈 해몽 좀 해주세요"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator_bottom" />
+
+    <ImageView
+        android:id="@+id/comment_iv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/baseline_message_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_tv" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="댓글 1"
+        android:textColor="#8725C3"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_iv"
+        app:layout_constraintStart_toEndOf="@+id/comment_iv"
+        app:layout_constraintTop_toTopOf="@+id/comment_iv" />
+
+
+    <View
+        android:id="@+id/separator_comment_top"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#4C007A"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator_comment_top" />
+
+    <EditText
+        android:id="@+id/comment_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="댓글을 입력하세요."
+        android:paddingStart="30dp"
+        android:textColor="#8725C3"
+        android:fontFamily="@font/pretendard"
+        android:padding="16dp"
+        android:background="@drawable/edittext_round_corner_rectangle"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_send_24"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/comment_input"
+        app:layout_constraintEnd_toEndOf="@+id/comment_input"
+        app:layout_constraintTop_toTopOf="@+id/comment_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

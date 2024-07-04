@@ -33,21 +33,24 @@
         app:layout_constraintTop_toBottomOf="@id/register_main_tv"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"/>
+
     <EditText
         android:id="@+id/register_name_et"
-        android:hint="이름을 입력해주세요"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/grey"
-        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/register_name_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"/>
+        android:hint="이름을 입력해주세요"
+        android:inputType="text"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_name_tv" />
+
     <View
         android:id="@+id/register_line1"
         android:layout_width="0dp"
@@ -62,7 +65,7 @@
         android:id="@+id/register_name_check_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이름은 3-8글자 내로 입력해주세요"
+        android:text="이름은 공백 없이 1-8글자 내로 입력해주세요"
         android:textColor="@color/red"
         android:fontFamily="@font/pretendardvariable"
         android:textSize="11sp"
@@ -120,6 +123,42 @@
         app:layout_constraintBottom_toBottomOf="@id/register_line2"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="4dp"/>
+    <TextView
+        android:id="@+id/register_id_check_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디는 공백 없이 영문자, 숫자를 혼합해 5-15글자 내로 입력해주세요"
+        android:textColor="@color/red"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_line2"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/register_id_duplicate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다른 사용자의 아이디와 중복돼서 사용할 수 없어요"
+        android:textColor="@color/red"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_line2"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:id="@+id/register_id_okay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용할 수 있는 아이디예요"
+        android:textColor="@color/green"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_line2"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="20dp"/>
 
 
 
@@ -164,7 +203,7 @@
         android:id="@+id/register_pw_check_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호는 영문자, 숫자를 혼합해 입력해주세요"
+        android:text="비밀번호는 공백 없이 영문자, 숫자를 혼합해 5-15글자 내로 입력해주세요"
         android:textColor="@color/red"
         android:fontFamily="@font/pretendardvariable"
         android:textSize="11sp"
@@ -240,6 +279,19 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="28dp"/>
+
+    <TextView
+        android:id="@+id/register_final_check_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입에 실패했어요"
+        android:textColor="@color/red"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/register_btn"
+        android:layout_marginBottom="7dp" />
         
 
 </androidx.constraintlayout.widget.ConstraintLayout>
