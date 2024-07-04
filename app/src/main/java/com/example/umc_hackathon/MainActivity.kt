@@ -28,22 +28,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun setFloatingActionButtonListener(fragment: Fragment) {
+    private fun setFloatingActionButtonListener(fragment : Fragment) {
         binding.mainFloatingButton.setOnClickListener {
-            when (fragment) {
-                is DiaryFragment -> {
-                    startActivity(Intent(this,DreamdiaryTagActivity::class.java))
-                }
-                is InterpretationFragment -> {
-                    startActivity(Intent(this, DreaminterpretationExpertContentActivity::class.java))
-                }
-                is DreamShareFragment -> {
-                    startActivity(Intent(this, DreaminterpretationContentActivity::class.java))
-                }
-                is MypageFragment -> {
-                    // 마이페이지 Fragment에서의 특별한 동작
-                }
-            }
+            startActivity(Intent(this, DreaminterpretationContentActivity::class.java))
         }
 
         if (fragment is MypageFragment) {

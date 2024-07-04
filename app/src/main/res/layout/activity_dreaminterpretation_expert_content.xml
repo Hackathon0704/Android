@@ -13,10 +13,7 @@
         android:background="@color/dark_purple"
         app:layout_constraintTop_toTopOf="@id/dreaminterpretation_expert_save_tv"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        />
-
-
+        android:layout_marginStart="20dp" />
 
     <TextView
         android:id="@+id/dreaminterpretation_expert_save_tv"
