@@ -6,5 +6,7 @@
     <color name="dark_purple">#3E0064</color>
     <color name="main_purple">#7300B9</color>
     <color name="light_purple">#CFADE4</color>
+    <color name="edittext_purple">#510083</color>
+
 
 </resources>
