@@ -1,5 +1,6 @@
 package com.example.umc_hackathon
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,11 @@ class InterpretationsFragment : Fragment() {
     ): View? {
         binding = FragmentInterpretationsBinding.inflate(inflater, container, false)
 
+        binding.maru.setOnClickListener {
+
+            val intent = Intent(requireContext(), DreaminterpretationExpertContentActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
