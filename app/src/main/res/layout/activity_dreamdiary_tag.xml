@@ -171,6 +171,7 @@
         app:layout_constraintStart_toStartOf="@id/dreamdiary_tag_category_tv"
         />
 
+
     <Button
         android:id="@+id/tag_baddream"
         android:layout_width="wrap_content"
