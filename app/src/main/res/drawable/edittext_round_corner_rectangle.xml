@@ -8,6 +8,7 @@
             <corners android:radius="10dp"/>
             <solid
                 android:color="@color/light_purple" />
+            <padding android:left="25dp"/>
         </shape>
     </item>
 

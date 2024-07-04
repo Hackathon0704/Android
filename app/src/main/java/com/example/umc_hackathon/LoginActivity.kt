@@ -13,14 +13,14 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
 
-    lateinit var userAccount: UserAccount
+    lateinit var useraccount: UserAccount
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        userAccount = UserAccount("", "")
+        useraccount = UserAccount("", "")
 
         binding.loginIdCheckTv.visibility = View.INVISIBLE
         binding.loginPwCheckTv.visibility = View.INVISIBLE
@@ -32,10 +32,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun login() {
         val userService = getRetrofit().create(UserInterface::class.java)
-        userAccount.account = binding.loginIdEt.text.toString()
-        userAccount.password = binding.loginPwEt.text.toString()
+        useraccount.account = binding.loginIdEt.text.toString()
+        useraccount.password = binding.loginPwEt.text.toString()
 
-        userService.login(userAccount).enqueue(object: Callback<UserResponse<UserLogin>> {
+        userService.login(useraccount).enqueue(object: Callback<UserResponse<UserLogin>> {
             override fun onResponse(call: Call<UserResponse<UserLogin>>, response: Response<UserResponse<UserLogin>>) {
                 Log.d("loign Success", response.toString())
                 val resp = response.body()

@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:text="아직 공유된 꿈은이 없어요 \n
+        android:text="아직 공유된 꿈이 없어요 \n
         Dream Girl에서 친구들과 꿈을 공유하고 \n
         함께 소통할수 있어요
         "
