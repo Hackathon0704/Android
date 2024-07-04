@@ -13,6 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -96,14 +97,6 @@
                         android:textColor="@android:color/white"
                         android:layout_marginStart="20dp" />
 
-                    <TextView
-                        android:id="@+id/friend_count_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="admin5678님 외 9명"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/white"
-                        android:layout_marginStart="20dp" />
                 </LinearLayout>
 
                 <TextView
@@ -150,18 +143,12 @@
                         android:id="@+id/dream_interpretation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="꿈해몽"
+                        android:text="꿈 해몽"
                         android:textSize="30sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/white"
                         android:layout_marginStart="20dp" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_dream_interpretation1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:paddingBottom="8dp" />
                 </LinearLayout>
 
                 <TextView
@@ -214,12 +201,6 @@
                         android:textColor="@android:color/white"
                         android:layout_marginStart="20dp" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_pro_dream_interpretation1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:paddingBottom="8dp" />
                 </LinearLayout>
 
                 <TextView
@@ -272,12 +253,6 @@
                         android:textColor="@android:color/white"
                         android:layout_marginStart="20dp" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_friend_dream_interpretation1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:paddingBottom="8dp" />
                 </LinearLayout>
 
                 <TextView
