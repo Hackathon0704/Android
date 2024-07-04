@@ -44,6 +44,10 @@ class LoginActivity : AppCompatActivity() {
                         "COMMON200"-> {
                             Log.d("loign Result", resp.message)
 
+                            AppData.user_Account = binding.loginIdEt.text.toString()
+                            AppData.user_Id = resp.result.userId
+                            AppData.user_Name = resp.result.name
+
                             startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                             finishAffinity()
                         }

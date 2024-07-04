@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.umc_hackathon.AppData
 import com.example.umc_hackathon.MainActivity
 import com.example.umc_hackathon.MypageDreamInterpretationExpertFragment
 import com.example.umc_hackathon.MypageDreamInterpretationFragment
@@ -48,6 +49,10 @@ class MypageFragment : Fragment() {
                 .replace(R.id.main_frm, MypageDreamShareFriendFragment())
                 .commitAllowingStateLoss()
         }
+
+
+        binding.tvUsername.text = AppData.user_Name
+        binding.tvUserid.text = AppData.user_Account
 
         return binding.root
     }

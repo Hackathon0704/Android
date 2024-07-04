@@ -13,7 +13,8 @@ data class UserJoin(
 )
 
 data class UserLogin(
-    val userId: Int
+    val userId: Int,
+    val name: String
 )
 
 data class UserCheck(
@@ -28,6 +29,5 @@ data class UserAccount(
 data class UserSignup(
     var name: String,
     var account: String,
-    var password: String,
-    var passwordConfirm: String
+    var password: String
 )

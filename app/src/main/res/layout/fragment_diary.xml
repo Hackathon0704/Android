@@ -54,9 +54,10 @@
         android:layout_marginStart="8dp"/>
     
     <TextView
+        android:id="@+id/diary_null_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아직 작성된 일기가 없어요\nDream Girl에서 지유님의 꿈을 기록해보세요"
+        android:text="아직 작성된 일기가 없어요"
         android:textColor="@color/white"
         android:lineSpacingExtra="15dp"
         android:fontFamily="@font/pretendardvariable"
@@ -64,8 +65,50 @@
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:id="@+id/diary_null_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/diary_null_tv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/diary_null_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dream Girl에서 "
+            android:textColor="@color/white"
+            android:lineSpacingExtra="15dp"
+            android:fontFamily="@font/pretendardvariable"
+            android:textSize="14sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/diary_null_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지유"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="15dp"
+            android:fontFamily="@font/pretendardvariable"
+            android:textSize="14sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/diary_null_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="님의 꿈을 기록해보세요"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="15dp"
+            android:fontFamily="@font/pretendardvariable"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
