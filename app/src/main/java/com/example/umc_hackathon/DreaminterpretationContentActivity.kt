@@ -9,7 +9,7 @@ class DreaminterpretationContentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityDreaminterpretationContentBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
+        binding = ActivityDreaminterpretationContentBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

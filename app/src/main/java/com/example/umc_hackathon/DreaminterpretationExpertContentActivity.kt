@@ -9,7 +9,8 @@ class DreaminterpretationExpertContentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityDreaminterpretationExpertContentBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
+        binding = ActivityDreaminterpretationExpertContentBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
     }
 }
