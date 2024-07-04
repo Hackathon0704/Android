@@ -4,22 +4,26 @@
 
     <item
         android:id="@+id/diary_Fragment"
+        android:icon="@drawable/diary"
         app:showAsAction="always"
         android:enabled="true"
         android:title="@string/diary" />
 
     <item
-        android:id="@+id/dreamshare_Fragment"
-        app:showAsAction="always"
-        android:title="@string/dreamshare" />
-
-    <item
         android:id="@+id/interpretation_Fragment"
+        android:icon="@drawable/moon"
         app:showAsAction="always"
         android:title="@string/interpretation" />
 
     <item
+        android:id="@+id/dreamshare_Fragment"
+        android:icon="@drawable/share"
+        app:showAsAction="always"
+        android:title="@string/dreamshare" />
+
+    <item
         android:id="@+id/mypage_Fragment"
+        android:icon="@drawable/mypage"
         app:showAsAction="always"
         android:title="@string/mypage" />
 </menu>
