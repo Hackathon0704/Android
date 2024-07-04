@@ -33,21 +33,24 @@
         app:layout_constraintTop_toBottomOf="@id/register_main_tv"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"/>
+
     <EditText
         android:id="@+id/register_name_et"
-        android:hint="이름을 입력해주세요"
-        android:textColorHint="@color/grey"
-        android:textColor="@color/grey"
-        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/register_name_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"/>
+        android:hint="이름을 입력해주세요"
+        android:inputType="text"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_name_tv" />
+
     <View
         android:id="@+id/register_line1"
         android:layout_width="0dp"
