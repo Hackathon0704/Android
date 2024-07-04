@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/diary_Fragment"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:title="@string/diary" />
+
+    <item
+        android:id="@+id/dreamshare_Fragment"
+        app:showAsAction="always"
+        android:title="@string/dreamshare" />
+
+    <item
+        android:id="@+id/interpretation_Fragment"
+        app:showAsAction="always"
+        android:title="@string/interpretation" />
+
+    <item
+        android:id="@+id/mypage_Fragment"
+        app:showAsAction="always"
+        android:title="@string/mypage" />
+</menu>
