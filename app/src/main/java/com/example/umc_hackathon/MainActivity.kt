@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.mainFloatingButton.setOnClickListener {
             when (fragment) {
                 is DiaryFragment -> {
-                    startActivity(Intent(this,DreaminterpretationContentActivity::class.java))
+                    startActivity(Intent(this,DreamdiaryTagActivity::class.java))
                 }
                 is InterpretationFragment -> {
                     startActivity(Intent(this, DreaminterpretationExpertContentActivity::class.java))

@@ -1,7 +1,9 @@
 package com.example.umc_hackathon
 
 import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.os.Build
+import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -19,20 +21,47 @@ class DreamdiaryTagActivity : AppCompatActivity() {
         binding = ActivityDreamdiaryTagBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 현재 날짜 받아오기
-        var curdate = LocalDate.now()
-        var Strdate = curdate.format(DateTimeFormatter.ofPattern("yyyy.mm.dd"))
-        binding.tagDateTv.text = Strdate
-
         // 날짜 변경
         binding.tagDateTv.setOnClickListener {
             val cal = Calendar.getInstance()
             val data = DatePickerDialog.OnDateSetListener { view, year, month, day ->
-                binding.tagDateTv.text = "${year}.${month}.${day}"
+                binding.tagDateTv.text = "${year}.${month + 1}.${day}"
             }
 
             DatePickerDialog(this, data, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH),
                 cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
+        // 취침시간변경
+        binding.tagSleepTimeCl.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val data = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                binding.tagSleepTimeTv2.text = "${hourOfDay}:${minute}"
+            }
+
+            TimePickerDialog(this, data, cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE), true).show()
+        }
+
+        // 기상시간변경
+        binding.tagWakeTimeCl.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val data = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+                binding.tagWakeTimeTv2.text = "${hourOfDay}:${minute}"
+            }
+
+            TimePickerDialog(this, data, cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE), true).show()
+        }
+
+
+
+        binding.tagExitIv.setOnClickListener {
+           finish()
+        }
+        binding.tagNextTv.setOnClickListener {
+            val intent = Intent(this, DreamdiaryContentActivity::class.java)
+            startActivity(intent)
         }
     }
 }
