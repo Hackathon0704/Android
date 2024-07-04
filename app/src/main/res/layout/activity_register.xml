@@ -62,7 +62,7 @@
         android:id="@+id/register_name_check_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이름은 3-8글자 내로 입력해주세요"
+        android:text="이름은 공백 없이 1-8글자 내로 입력해주세요"
         android:textColor="@color/red"
         android:fontFamily="@font/pretendardvariable"
         android:textSize="11sp"
@@ -120,6 +120,18 @@
         app:layout_constraintBottom_toBottomOf="@id/register_line2"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="4dp"/>
+    <TextView
+        android:id="@+id/register_id_check_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디는 공백 없이 영문자, 숫자를 혼합해 5-15글자 내로 입력해주세요"
+        android:textColor="@color/red"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_line2"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="20dp"/>
 
 
 
@@ -164,7 +176,7 @@
         android:id="@+id/register_pw_check_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호는 영문자, 숫자를 혼합해 입력해주세요"
+        android:text="비밀번호는 공백 없이 영문자, 숫자를 혼합해 5-15글자 내로 입력해주세요"
         android:textColor="@color/red"
         android:fontFamily="@font/pretendardvariable"
         android:textSize="11sp"
@@ -240,6 +252,19 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="28dp"/>
+
+    <TextView
+        android:id="@+id/register_final_check_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입에 실패했어요"
+        android:textColor="@color/red"
+        android:fontFamily="@font/pretendardvariable"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/register_btn"
+        android:layout_marginBottom="7dp" />
         
 
 </androidx.constraintlayout.widget.ConstraintLayout>
