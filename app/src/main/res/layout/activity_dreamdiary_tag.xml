@@ -159,59 +159,65 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp" />
 
-    <Button
+    <ToggleButton
         android:id="@+id/tag_daily"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="일상"
+        android:textOn="일상"
+        android:textOff="일상"
+        android:disabledAlpha="1.2"
         app:layout_constraintTop_toBottomOf="@id/dreamdiary_tag_category_tv"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/dreamdiary_tag_category_tv"
         />
 
-    <Button
+    <ToggleButton
         android:id="@+id/tag_baddream"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="악몽"
+        android:textOn="악몽"
+        android:textOff="악몽"
         app:layout_constraintTop_toTopOf="@id/tag_daily"
         app:layout_constraintStart_toEndOf="@id/tag_daily"
         android:layout_marginStart="10dp"
         />
 
-    <Button
+    <ToggleButton
         android:id="@+id/tag_recycledream"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="반복되는  꿈"
+        android:textOn="반복되는  꿈"
+        android:textOff="반복되는  꿈"
         app:layout_constraintTop_toTopOf="@id/tag_daily"
         app:layout_constraintStart_toEndOf="@id/tag_baddream"
         android:layout_marginStart="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_luciddream"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="자각몽"
+        android:textOn="자각몽"
+        android:textOff="자각몽"
         app:layout_constraintStart_toStartOf="@id/tag_daily"
         app:layout_constraintTop_toBottomOf="@id/tag_daily"
         android:layout_marginTop="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_foresightdream"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="예지몽"
+        android:textOn="예지몽"
+        android:textOff="예지몽"
         app:layout_constraintTop_toTopOf="@id/tag_luciddream"
         app:layout_constraintStart_toEndOf="@id/tag_luciddream"
         android:layout_marginStart="10dp"
@@ -227,35 +233,38 @@
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/tag_luciddream"
         app:layout_constraintTop_toBottomOf="@+id/tag_luciddream" />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_person1"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="가족"
+        android:textOn="가족"
+        android:textOff="가족"
         app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_person_tv"
         app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_person_tv"
         android:layout_marginTop="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_person2"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="친구"
+        android:textOn="친구"
+        android:textOff="친구"
         app:layout_constraintStart_toEndOf="@+id/tag_person1"
         app:layout_constraintTop_toTopOf="@+id/tag_person1"
         android:layout_marginStart="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_person3"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="애인"
+        android:textOn="애인"
+        android:textOff="애인"
         app:layout_constraintStart_toEndOf="@+id/tag_person2"
         app:layout_constraintTop_toTopOf="@+id/tag_person2"
         android:layout_marginStart="10dp"
@@ -273,35 +282,38 @@
         app:layout_constraintTop_toBottomOf="@+id/tag_person1"
         android:layout_marginTop="20dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_location1"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="학교"
+        android:textOn="학교"
+        android:textOff="학교"
         app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_location_tv"
         app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_location_tv"
         android:layout_marginTop="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_location2"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="집"
+        android:textOn="집"
+        android:textOff="집"
         app:layout_constraintStart_toEndOf="@+id/tag_location1"
         app:layout_constraintTop_toTopOf="@+id/tag_location1"
         android:layout_marginStart="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_location3"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="직장"
+        android:textOn="직장"
+        android:textOff="직장"
         app:layout_constraintStart_toEndOf="@+id/tag_location2"
         app:layout_constraintTop_toTopOf="@+id/tag_location2"
         android:layout_marginStart="10dp"
@@ -317,35 +329,38 @@
         app:layout_constraintStart_toStartOf="@+id/tag_location1"
         app:layout_constraintTop_toBottomOf="@+id/tag_location1"
         android:layout_marginTop="20dp"/>
-    <Button
+    <ToggleButton
         android:id="@+id/tag_feel1"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="좋음"
+        android:textOn="좋음"
+        android:textOff="좋음"
         app:layout_constraintStart_toStartOf="@+id/dreamdiary_tag_feel_tv"
         app:layout_constraintTop_toBottomOf="@+id/dreamdiary_tag_feel_tv"
         android:layout_marginTop="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_feel2"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="보통"
+        android:textOn="보통"
+        android:textOff="보통"
         app:layout_constraintStart_toEndOf="@+id/tag_feel1"
         app:layout_constraintTop_toTopOf="@+id/tag_feel1"
         android:layout_marginStart="10dp"
         />
-    <Button
+    <ToggleButton
         android:id="@+id/tag_feel3"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/tag_button_background"
         android:textColor="@color/white"
-        android:text="나쁨"
+        android:textOn="나쁨"
+        android:textOff="나쁨"
         app:layout_constraintStart_toEndOf="@+id/tag_feel2"
         app:layout_constraintTop_toTopOf="@+id/tag_feel2"
         android:layout_marginStart="10dp"
