@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.umc_hackathon.DreaminterpretationExpertContentActivity
+import com.example.umc_hackathon.InterpretationsFragment
+import com.example.umc_hackathon.MainActivity
+import com.example.umc_hackathon.MypageDreamInterpretationFragment
 import com.example.umc_hackathon.R
 import com.example.umc_hackathon.databinding.FragmentDreaminterpretationBinding
 
@@ -37,8 +40,9 @@ class InterpretationFragment : Fragment() {
         }
 
         binding.gotoExpert.setOnClickListener {
-            val intent = Intent(activity, DreaminterpretationExpertContentActivity::class.java)
-            startActivity(intent)
+            (context as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.main_frm, InterpretationsFragment())
+                .commitAllowingStateLoss()
         }
 
         return binding.root
