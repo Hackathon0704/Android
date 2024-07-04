@@ -16,6 +16,7 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".RegisterCheckActivity"/>
+        <activity android:name=".DreamdiaryTagActivity"/>
 
         <activity
             android:name=".MainActivity"
