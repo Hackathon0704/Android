@@ -12,14 +12,17 @@ class DiaryFragment : Fragment() {
 
     lateinit var binding : FragmentDiaryBinding
 
-    override fun onStop() {
-        super.onStop()
-        binding.dreamLog.visibility = View.VISIBLE
-        binding.box.visibility = View.VISIBLE
-        binding.diaryNullTv1.visibility = View.GONE
-        binding.diaryNullTv2.visibility = View.GONE
-        binding.diaryNullTv3.visibility = View.GONE
-        binding.diaryNullTv4.visibility = View.GONE
+    override fun onResume() {
+        super.onResume()
+
+        if(AppData.isgoMain) {
+            binding.dreamLog.visibility = View.VISIBLE
+            binding.box.visibility = View.VISIBLE
+            binding.diaryNullTv1.visibility = View.GONE
+            binding.diaryNullTv2.visibility = View.GONE
+            binding.diaryNullTv3.visibility = View.GONE
+            binding.diaryNullTv4.visibility = View.GONE
+        }
 
     }
 

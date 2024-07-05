@@ -64,4 +64,10 @@ class DreamdiaryTagActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onRestart() {
+        if(AppData.isgoMain)    finish()
+
+        super.onRestart()
+    }
 }

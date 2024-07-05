@@ -18,6 +18,14 @@ class DreamShareFragment : Fragment() {
     ): View? {
         binding = FragmentDreamshareBinding.inflate(inflater, container, false)
 
+        binding.box.visibility = View.INVISIBLE
+
         return binding.root
+    }
+
+    override fun onStop() {
+        super.onStop()
+        binding.box.visibility = View.VISIBLE
+        binding.dreamShareContentTv.visibility = View.GONE
     }
 }
