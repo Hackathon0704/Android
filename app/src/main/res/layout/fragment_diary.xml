@@ -142,7 +142,7 @@
             android:layout_height="35dp"
             android:background="@drawable/button_normal2"
             android:textColor="@color/white"
-            android:text="반복되는  꿈"
+            android:text="학교"
             app:layout_constraintTop_toTopOf="@id/tag_daily"
             app:layout_constraintStart_toEndOf="@id/tag_baddream"
             android:layout_marginStart="10dp"
